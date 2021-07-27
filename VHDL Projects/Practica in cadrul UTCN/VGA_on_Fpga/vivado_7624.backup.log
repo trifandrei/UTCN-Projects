@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Sep 06 21:41:33 2020
+# Process ID: 7624
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12332 C:\Users\trian\Desktop\Practica\VGA_on_Fpga\VGA_on_Fpga.xpr
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/vivado.log
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xillinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 756.082 ; gain = 131.367
+launch_runs impl_1 -jobs 4
+[Sun Sep 06 21:47:07 2020] Launched impl_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 768.660 ; gain = 0.000
+remove_files  -fileset constrs_1 C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/constrs_1/imports/lab2/Basys3_test_env.xdc
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Process appears to be owned by user 'trian' and cannot be killed by user '??'
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 06 21:49:32 2020...

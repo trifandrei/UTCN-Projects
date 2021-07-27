@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+
+entity Clock is
+	port( Normal_clk_i: in  std_logic;
+			Nou_clk_o: out std_logic := '1'
+		  );
+end Clock;
+
+architecture Generare of Clock is
+	signal sec:	integer range 0 to 60 := 0;
+	signal nr:  integer := 1;
+	signal clk:	std_logic := '0';
+
+begin
+
+-- Generare clk,pentru un clock cu frecventa de 100Mhz genereaza  un nou clock cu frecventa de un Hz
+process(Normal_clk_i)
+begin
+	if(Normal_clk_i'event and Normal_clk_i = '1') then
+		nr <= nr + 1;
+		if(nr = 1) then -- 50000000 
+			clk <= not clk;
+			nr <= 1;
+		end if;
+	end if;
+end process;
+
+-- perioada lui clk 1 secunda
+process(clk)
+begin
+	if(clk'event and clk = '1') then
+		sec <= sec + 1;
+		if(sec = 59) then
+			sec <= 0;
+			Nou_clk_o <= '1';
+		else
+			Nou_clk_o <= '0';
+		end if;
+	end if;
+end process;
+
+end Generare;

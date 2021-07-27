@@ -1,0 +1,56 @@
+ set (arithmetic ).
+ assign(domain_size,7).%number[1..6]
+
+
+list(distinct).
+[g1,g2,g3,g4,g5,g6].
+end_of_list.
+
+formulas(assumptions).
+
+%The vertical line is formed by the grids g1,g3,g6.
+%The horizontal line is formed by the grids g2,g3,g4,g5.
+%The grids  can't take 0 as value
+
+(g1=1 | g1=2 | g1=3 | g1=4 | g1=5 | g1=6).
+(g2=1 | g2=2 | g2=3 | g2=4 | g2=5 | g2=6).
+(g3=1 | g3=2 | g3=3 | g3=4 | g3=5 | g3=6).
+(g4=1 | g4=2 | g4=3 | g4=4 | g4=5 | g4=6).
+(g5=1 | g5=2 | g5=3 | g5=4 | g5=5 | g5=6).
+(g6=1 | g6=2 | g6=3 | g6=4 | g6=5 | g6=6).
+
+%Level 1
+%sum on the vline=sum on the hline.
+%g1+g3+g6=g2+g3+g4+g5.
+
+%Level 2
+%the sum on the horizontal line is =2*sum of the vertical.
+%2*(g1+g3+g6)=g2+g3+g4+g5.
+
+%Level 3
+%The sum of the horizontal line is 1 more then the sum of the verticall one
+%g2+g3+g4+g5=g1+g3+g6+1.
+
+%Level 4
+%product in the horizontal line is eqal with the product in vertical line.
+%g1*g3*g6=g2*g3*g4*g5.
+
+%Level 5
+%The sum of the horizontal line is ten bigger then the vertical line.
+%g2+g3+g4+g5=g1+g3+g6+10.
+
+%Level 6
+%The sum of the numbers in horizontal line is 3 times  the sum of the number in the vertical line.
+%g2+g3+g4+g5=(g1+g3+g6)*3.
+
+%Level 7
+%The sum of the number in the vertical line is half of the sum on the orizontal line.
+%(g2+g3+g4+g5) mod 2 =0.
+%(g2+g3+g4+g5)/2=g1+g3+g6.
+
+%Level 8
+%Arrange the numbers on the yellow tiles so that the vertical total multiplied by the center number equals the horizontal line.
+(g2+g3+g4+g5)=(g1+g3+g6)*g3.
+
+end_of_list.
+

@@ -1,0 +1,56 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+use std.textio.all;
+
+entity AlarmA is
+			port( Timpul_Alarma_i: in bit_vector(15 downto 0); -- Current time
+				  Alarma_set_m1_i: in integer; -- Setare minute unitati
+				  Alarma_set_m2_i: in integer; -- Setare minute zeci
+                  Alarma_set_h1_i: in integer; -- Setare ora unitati
+                  Alarma_set_h2_i: in integer; -- Setare ora zeci
+                  Alarma_on_i:	in	std_logic; -- Alarma(1 = pornit, 0 = oprit)
+                  Alarma_bzzz_o:out std_logic -- SONERIA! (1 = suna, 0 = nu suna)
+);
+
+-- Convertesc 2 intregi in bit_vector si ii combin intr-un vector de biti de dimensiune 16
+function convert(constant m1,m2,h1,h2: in integer) return bit_vector is
+
+variable min_bits: bit_vector(7 downto 0);
+variable hur_bits: bit_vector(7 downto 0);
+variable ret:	bit_vector(15 downto 0);
+
+begin
+	min_bits(7 downto 4) := to_bitvector(std_logic_vector(to_unsigned(m2, 4)));
+	min_bits(3 downto 0) := to_bitvector(std_logic_vector(to_unsigned(m1, 4)));
+	hur_bits(7 downto 4) := to_bitvector(std_logic_vector(to_unsigned(h2, 4)));
+	hur_bits(3 downto 0) := to_bitvector(std_logic_vector(to_unsigned(h1, 4)));
+	ret(7 downto 0) := min_bits;
+	ret(15 downto 8) := hur_bits;
+
+	return ret;
+end convert;
+end Alarma;
+
+architecture Behaviour of Alarma is
+  signal bit_alarm: bit_vector(15 downto 0);
+begin
+  -- Comparam timpul setat cu timpul curent
+  process(Timpul_Alarma_i, Alarma_on_i)
+  begin
+    if Alarma_on_i = '1' then --Verifica daca alarma e pornita
+      bit_alarm <= convert(Alarma_set_m1_i, Alarma_set_m2_i,
+                            Alarma_set_h1_i, Alarma_set_h2_i); -- convertim in bit vector
+      if bit_alarm = Timpul_Alarma_i then --Compar timpul
+        Alarma_bzzz_o <= '1'; -- SUNA!
+      else
+        Alarma_bzzz_o <= '0'; -- NU SUNA!
+      end if;
+    else
+      Alarma_bzzz_o <= '0'; -- Daca alarma este oprita nu mai  suna
+    end if;
+  end process;
+end Behaviour;

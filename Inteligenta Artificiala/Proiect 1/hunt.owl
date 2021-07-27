@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://example.com/father#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://example.com/hunt">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="not-weapon"/>
+  <owl:Class rdf:ID="weapon">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:complementOf rdf:resource="#not-weapon"/>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasCaliber"/>
+  <weapon rdf:ID="sniper">
+    <hasCaliber>
+      <not-weapon rdf:ID="cal365mm">
+      </not-weapon>
+    </hasCaliber>
+  </weapon>
+  <weapon rdf:ID="pistol">
+    <hasCaliber rdf:resource="#cal12mm"/>
+  </weapon>
+  <weapon rdf:ID="shotgun">
+    <hasCaliber rdf:resource="#cal66mm"/>
+  </weapon>
+  <not-weapon rdf:ID="knife"/>
+  <not-weapon rdf:ID="bow"/>
+  <not-weapon rdf:ID="prastie"/>
+</rdf:RDF>

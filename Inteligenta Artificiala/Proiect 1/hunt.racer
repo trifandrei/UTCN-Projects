@@ -1,0 +1,187 @@
+(full-reset)
+;(racer-read-file "")
+
+(in-knowledge-base hunt hunt-onthology)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(instance sniper weapon)
+(instance shotgun weapon)
+(instance pistol weapon)
+
+(instance cal365mm caliber)
+(instance cal66mm caliber)
+(instance cal12mm caliber)
+
+(instance bear animal)
+(instance deer animal)
+(instance rabbit animal)
+
+(instance Romania Country)
+(instance Suedia Country)
+(instance Rusia Country)
+
+
+(instance deer-foot-print foot-print)
+(instance bear-foot-print foot-print)
+(instance rabbit-foot-print foot-print)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(define-primitive-role has-foot-print :domain animal :range foot-print )
+
+(define-primitive-role caliber-for-animal :domain caliber :range animal);rol sub forma de predicat 
+
+;definim rol pentru a putea interoga daca o urma are calibru
+(define-primitive-role caliber-for-foot-print :domain caliber :range foot-print)
+
+(define-primitive-role terrain-for-animal :domain terrain :range animal :feature t);verb
+
+(define-primitive-role animal-has-weapon :domain weapon)
+
+(define-primitive-role caliber-for-terrain :domain caliber :range terrain)
+
+(define-primitive-role animal-has-country :domain animal :range Country)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(implies animal(all has-foot-print foot-print))
+(implies weapon (all has-caliber caliber))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(related deer deer-foot-print has-foot-print)
+(related bear bear-foot-print has-foot-print)
+(related rabbit rabbit-foot-print has-foot-print)
+
+(related sniper cal365mm has-caliber)
+(related shotgun cal66mm has-caliber)
+(related pistol cal12mm has-caliber)
+
+(related cal365mm bear caliber-for-animal)
+(related cal66mm deer caliber-for-animal)
+(related cal12mm rabbit caliber-for-animal)
+
+(related mountain bear terrain-for-animal)
+(related plain rabbit terrain-for-animal)
+(related forest deer terrain-for-animal)
+
+(related deer Romania animal-has-country)
+(related bear Rusia animal-has-country)
+(related rabbit Suedia animal-has-country)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;definim regula calibru pentru o urma
+(define-rule (?x ?z caliber-for-foot-print)
+	(and (?x ?y caliber-for-animal) (?y ?z has-foot-print )))
+(run-all-rules)
+
+
+;regula arma for terrain
+(define-rule (?x ?z weapon-for-terrain)
+    (and (?x ?y1 has-caliber)(?y1 ?y2 caliber-for-animal)(?z ?y2 terrain-for-animal)))
+(run-all-rules) 
+
+;reguli pentru arma unui animal
+(define-rule (?x animal-has-weapon ) 
+	(and (?x weapon) (?y rabbit caliber-for-animal)(?x ?y has-caliber)))
+    (run-all-rules) 
+    
+(define-rule (?x animal-has-weapon ) 
+	(and (?x weapon)(?y deer caliber-for-animal)(?x ?y has-caliber)))
+    (run-all-rules) 
+    
+(define-rule (?x animal-has-weapon ) 
+	(and (?x weapon) (?y bear caliber-for-animal)(?x ?y has-caliber)))
+    (run-all-rules) 
+
+(define-rule (?y ?x caliber-for-terrain) 
+	(and (?x terrain)(?y ?z caliber-for-animal)(?x ?z terrain-for-animal)))
+ (run-all-rules)
+ 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;N-ary relation pattern;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+( implies Hunter ( and ( some  propety-1 has-name)
+                        ( some  propety-2 has-age)
+                        ( some  propety-3 has-address)))
+
+
+(define-concrete-domain-attribute has-name :domain Hunter :type string)
+(define-concrete-domain-attribute has-age :domain Hunter :type integer)
+(define-primitive-role has-address :domain Hunter :range Country   )
+
+
+(instance Trif Hunter)
+(attribute-filler Trif "Andrei" has-name )
+(attribute-filler Trif 23 has-age)
+(related Trif Romania has-address)
+
+;(concept-instances Hunter) 
+;(individual-fillers Trif has-address)
+;(individual-told-attribute-value Trif has-age)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Ce vaneaza trif?
+ (define-rule (Trif ?y animal-hunt ) 
+	(and (Trif Hunter) 
+    (?y animal)
+    (Trif ?z has-address)
+    (?y ?z animal-has-country)))
+ (run-all-rules)
+ 
+;Ce arma foloseste
+(define-rule (Trif ?t use-weapon ) 
+	(and (Trif Hunter)
+    (?y animal)
+    (Trif ?z has-address)
+    (?y ?z animal-has-country)
+    (?x ?y caliber-for-animal)
+    (?t ?x has-caliber)))
+ (run-all-rules)
+ 
+;Ce teren predomina in tara x
+(define-rule (?x ?t dominant-terrain ) 
+	(and (?x Country) (?t ?y terrain-for-animal)(?y ?x animal-has-country)))
+ (run-all-rules)
+ 
+;Unde este Trif acum?
+(define-rule (Trif ?x is-where ) 
+	(and (?x Country) (Trif ?y animal-hunt)(?y ?x animal-has-country)))
+ (run-all-rules)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Partition pattern;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define-concept Food (or grass hony))
+
+(disjoint grass hony)
+
+
+;(concept-disjoint? iarba miere)
+;(concept-parents iarba)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;PartOf pattern;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+( define-primitive-role has-part :transitive t :inverse is-part-of :domain Food)
+
+( implies Store ( some has-part Bait ))
+( implies Minifish ( some is-part-of Bait ))
+( implies Minifish Food )
+
+(concept-subsumes? ( some is-part-of Bait ) Minifish )
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;all weapons have a caliber
+;(implies weapon (all has-caliber caliber))
+;(instance sniper weapon)
+;(related sniper cal365mm has-caliber)
+;how to see sniper's caliber
+;(individual-fillers sniper has-caliber) 
+;how to see instances of caliber
+;(concept-instances caliber)
+;(concept-instances animal)
+;(concept-instances weapon)
+
+(racer-read-file "Sbc/hunting_interogari.racer")

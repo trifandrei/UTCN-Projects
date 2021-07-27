@@ -1,0 +1,37 @@
+set(arithmetic).
+assign(domain_size,9). % 9 numbers
+
+list(distinct).
+[0,g1,g2,g3,g4,g5,g6,g7,g8]. % The grids
+end_of_list.
+formulas(assumptions).
+% If grid 1 is adjacent to grid 2, then grid 2 is also adjacent to grid 1
+
+adjacent(x,y) <-> adjacent(y,x). 
+% We check if the number on two adjacent grids are not consecutive
+
+adjacent(x,y) ->  abs(x + -y) != 1. 
+% Marking the adjacent grids (diagonally, vertically and horizontally)
+%   g1	
+% g2g3g4
+% g5g6g7
+%   g8
+adjacent(g1,g2).
+adjacent(g1,g3).
+adjacent(g1,g4). 
+adjacent(g2,g3).
+adjacent(g2,g5).
+adjacent(g2,g6).
+adjacent(g3,g4).
+adjacent(g3,g5).
+adjacent(g3,g6).
+adjacent(g3,g7).
+adjacent(g4,g6).
+adjacent(g4,g7).
+adjacent(g5,g6).
+adjacent(g5,g8).
+adjacent(g6,g7).
+adjacent(g6,g8).
+adjacent(g7,g8).
+
+end_of_list.

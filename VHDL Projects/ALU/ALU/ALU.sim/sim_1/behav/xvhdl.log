@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/sume.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sume
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/impartire.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity impartire
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/Sqrt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity square_root
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/inmultire.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity inmultire
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sim_1/new/ALU_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU_TB

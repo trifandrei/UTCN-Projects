@@ -1,0 +1,103 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;racer;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(concept-instances caliber)
+(concept-instances weapon)
+(concept-instances animal)
+(concept-instances foot-print)
+
+;comanda pentru urma unui animal specific
+(individual-fillers deer has-foot-print)
+(individual-fillers bear has-foot-print)
+(individual-fillers rabbit has-foot-print)
+
+;determina animalul dupa calibru si invers
+(individual-fillers cal365mm caliber-for-animal)
+(individual-fillers bear (inv caliber-for-animal))
+
+
+;determina vanatori
+(concept-instances Hunter) 
+;determina adresa vanatorului trif
+(individual-fillers Trif has-address)
+;determina varsta vanatorului
+(individual-told-attribute-value Trif has-age)
+
+;verifica daca mancare este diferita
+(concept-disjoint? iarba miere)
+(concept-parents iarba)
+
+;how to see sniper's caliber
+(individual-fillers sniper has-caliber) 
+(individual-fillers pistol has-caliber) 
+(individual-fillers shotgun has-caliber) 
+
+
+;how to see instances of caliber
+;(concept-instances caliber)
+;(concept-instances animal)
+;(concept-instances weapon)
+
+(individual-instance? Trif Hunter)
+
+(concept-subsumes? ( some is-part-of Bait ) Minifish )
+
+;Evalueaza toate instantele
+(concept-instances *top*)
+
+
+(evaluate (length (all-individuals)))
+(evaluate (length (all-atomic-concepts)))
+(evaluate (length (all-roles)))
+(evaluate (length (all-rules)))
+
+(get-tbox-language)
+(get-tbox-language)
+(tbox-coherent?)
+(tbox-cyclic?)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;NRQL;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; CQ18: Which are all relations that were connected to weapon ?
+(retrieve (?x) (?x weapon))
+
+; CQ4 : Care este animalului x dupa urma sa?
+
+(retrieve (?x) 
+	(and (?x animal)
+	(deer-foot-print foot-print)
+	(?x deer-foot-print has-foot-print)))
+
+(retrieve (?x) 
+	(and (?x animal)
+	(bear-foot-print foot-print)
+	(?x bear-foot-print has-foot-print)))
+
+(retrieve (?x) 
+	(and (?x animal)
+	(rabbit-foot-print foot-print)
+	(?x rabbit-foot-print has-foot-print)))
+    
+;Determinam toti vanatorii din Romania
+(retrieve (?x ) 
+	(and (?x Hunter)
+	(Romania Country)
+	(?x Romania has-address)))
+    
+;determinam arma pentru un bear
+(retrieve (?x) 
+	(and (?x weapon) (bear animal)(?y bear caliber-for-animal)(?x ?y has-caliber)))
+
+;determinam arma pentru deer
+(retrieve (?x) 
+	(and (?x weapon) (deer animal)(?y deer caliber-for-animal)(?x ?y has-caliber)))
+    
+    ;determinam arma pentru rabbit
+(retrieve (?x) 
+	(and (?x weapon) (rabbit animal)(?y rabbit caliber-for-animal)(?x ?y has-caliber)))
+    
+;determina calibru pentru un teren
+(retrieve (?y ?x) 
+	(and (?x terrain) (?z animal)(?y ?z caliber-for-animal)(?x ?z terrain-for-animal)))
+    

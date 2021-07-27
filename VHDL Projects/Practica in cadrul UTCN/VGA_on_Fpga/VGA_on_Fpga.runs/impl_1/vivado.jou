@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Sep 06 21:47:12 2020
+# Process ID: 8704
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/impl_1
+# Command line: vivado.exe -log vga_on_fpga.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vga_on_fpga.tcl -notrace
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/impl_1/vga_on_fpga.vdi
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source vga_on_fpga.tcl -notrace

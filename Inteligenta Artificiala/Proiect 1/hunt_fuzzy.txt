@@ -1,0 +1,19 @@
+(define-fuzzy-concept LessThan15Bullets left-shoulder(0,30,0,15)) 
+
+(define-fuzzy-concept LowAmmo crisp(0,30,0,5))
+
+(define-fuzzy-concept  AlMostFullAmmo crisp(0,30,25,30))
+
+(define-fuzzy-concept ammo10 left-shoulder(0,30,12,12))
+
+(functional ammo)
+
+
+(instance ak47 (and Weapon (some ammo ammo10)))
+
+(implies sniper Weapon)
+
+(define-concept incarcator (and Weapon (some ammo LessThan15Bullets)))
+
+#determin cat  la suta din incarcator e gol 
+(min-instance? ak47 incarcator)

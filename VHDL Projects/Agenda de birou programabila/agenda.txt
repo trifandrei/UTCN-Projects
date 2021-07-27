@@ -1,0 +1,93 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+
+entity AgendaDigitala is
+	Port( Agenda_clk_i:in  std_logic;
+			Ceas_set_i:in std_logic;
+			Pornire_Alarma_i:in  std_logic;
+			SetareA_set_m1_i:in  integer range 0 to 9;
+			SetareA_set_m2_i:in  integer range 0 to 6;
+			SetareA_set_h1_i:in  integer range 0 to 9;
+			SetareA_set_h2_i:in  integer range 0 to 2;
+			Alarma_Suna_o: 	 out std_logic;
+			Ziua_o:out string(1 to 9);
+			Minute1_o:out integer ;
+			Minute2_o:out integer ;
+			Ora1_o:out integer ;
+			Ora2_o:out integer ;
+			ZiuaC_o:out integer;
+			LunaC_o:out integer;
+			AnC_o:out integer
+			);	
+end AgendaDigitala;
+
+architecture Behaviour of AgendaDigitala is
+	--Ceas
+	component Clock
+		Port( Normal_clk_i: in  std_logic;
+				Nou_clk_o: out std_logic
+		);
+	end component;
+	--Control
+	component Control
+		Port( Control_clk_i:  in  std_logic;
+				Control_set_i:  in  std_logic;
+				Control_timp_o: out bit_vector(15 downto 0);
+				Ziua:out string(1 to 9);
+				Minute1:out integer;
+				Minute2:out integer;
+				Ora1:out integer;
+				Ora2:out integer;
+				ZiuaC:out integer;
+				DataC:out integer;
+				AnC:out integer
+		);
+	end component;
+	--Alarma
+	component Alarma
+		Port(	Timpul_alarma_i: 	 in bit_vector(15 downto 0);
+				Alarma_set_m1_i: in integer;
+				Alarma_set_m2_i: in integer;
+				Alarma_set_h1_i: in integer;
+				Alarma_set_h2_i: in integer;
+				Alarma_on_i: 	 in std_logic;
+				Alarma_bzzz_o: 	 out std_logic
+				
+		);
+	end component;	
+	
+	signal puls: std_logic := '1';
+	signal timp_curent: bit_vector(15 downto 0);
+begin
+	
+	-- Generator--
+	Generator_map: Clock port map(Normal_clk_i => Agenda_clk_i,Nou_clk_o => puls); 
+	
+	-- Control
+	Control_map: Control port map( Control_clk_i  => puls,
+													 Control_set_i  => Ceas_set_i,
+													 Control_timp_o => timp_curent,
+		  											 Ziua => Ziua_o,
+													 Minute1 => Minute1_o,
+													 Minute2 => Minute2_o,
+			  										 Ora1 =>Ora1_o,
+													 Ora2 =>Ora2_o,
+													 ZiuaC=>ZiuaC_o,
+													 DataC=>LunaC_o,
+													 AnC=>AnC_o
+												);
+	-- Alarma
+	Alarma_map: Alarma port map( Timpul_alarma_i 	=> timp_curent,
+										Alarma_set_m1_i => SetareA_set_m1_i,
+										Alarma_set_m2_i => SetareA_set_m2_i,
+										Alarma_set_h1_i => SetareA_set_h1_i,
+										Alarma_set_h2_i => SetareA_set_h2_i,
+										Alarma_on_i 	=> Pornire_Alarma_i,
+										Alarma_bzzz_o	=> Alarma_Suna_o
+	);		
+	
+	
+end Behaviour;

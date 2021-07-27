@@ -1,0 +1,1 @@
+# Diferite jocuri din categoria aranjare forme implementate in Mace4/Prover9.

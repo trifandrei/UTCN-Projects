@@ -1,0 +1,78 @@
+/*
+
+Vivado v2016.4 (64-bit)
+SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+Process ID: 4408
+
+Current time: 	12/18/19 12:48:13 PM EET
+Time zone: 	Eastern European Time (Europe/Athens)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	D:/Vivado/2016.4/tps/win64/jre
+
+User name: 	Fonea
+User home directory: C:/Users/Fonea
+User working directory: C:/Users/Fonea/Desktop/PROIECT SSC/ALU
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI base root directory: D:/Vivado
+RDI data directory: D:/Vivado/2016.4/data
+RDI bin directory: D:/Vivado/2016.4/bin
+
+Vivado preferences path: C:/Users/Fonea/AppData/Roaming/Xilinx/Vivado/2016.4/vivado.ini
+Vivado layouts directory: C:/Users/Fonea/AppData/Roaming/Xilinx/Vivado/2016.4/layouts
+
+GUI allocated memory:	162 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 395 MB
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 40 MB (+39875kb) [00:00:20]
+// [Engine Memory]: 365 MB (+230738kb) [00:00:20]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bt:g (cd:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Fonea\Desktop\PROIECT SSC\ALU\ALU.xpr. Version: Vivado v2016.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 410 MB. GUI used memory: 26 MB. Current time: 12/18/19 12:48:16 PM EET
+// [Engine Memory]: 412 MB (+30608kb) [00:00:26]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 50 MB (+8253kb) [00:00:47]
+// [Engine Memory]: 491 MB (+61114kb) [00:00:47]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2016.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 504 MB. GUI used memory: 32 MB. Current time: 12/18/19 12:48:45 PM EET
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 745.461 ; gain = 127.465 
+// Project name: ALU; location: C:/Users/Fonea/Desktop/PROIECT SSC/ALU; part: xc7a100tcsg324-1
+// [Engine Memory]: 516 MB (+211kb) [00:00:57]
+dismissDialog("Open Project"); // bt:g (cd:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 59 MB (+6282kb) [00:00:59]
+// TclEventType: DG_UPDATE_GRAPH
+closeMainWindow("ALU - [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.xpr] - Vivado 2016.4"); // cd:JFrame
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit vivado.<br>If you choose to abort background task and exit immediately, you will lose all unsaved<br>changes to project. (Background Task)'

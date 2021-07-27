@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Aug 30 16:44:11 2020
+# Process ID: 9484
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent936 C:\Users\trian\Desktop\Practica\VGA_on_Fpga\VGA_on_Fpga.xpr
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/vivado.log
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xillinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 789.586 ; gain = 167.637
+import_files -norecurse {{H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd}}
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 30 16:47:39 2020...

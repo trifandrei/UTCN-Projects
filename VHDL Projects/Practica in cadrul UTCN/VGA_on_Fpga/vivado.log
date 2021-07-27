@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Sep 08 11:03:01 2020
+# Process ID: 1348
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent820 C:\Users\trian\Desktop\Practica\VGA_on_Fpga\VGA_on_Fpga.xpr
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/vivado.log
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga\vivado.jou
+#-----------------------------------------------------------
+sstart_guioopen_project C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.xprScanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xillinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 763.133 ; gain = 141.266
+eexit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 08 11:07:43 2020...

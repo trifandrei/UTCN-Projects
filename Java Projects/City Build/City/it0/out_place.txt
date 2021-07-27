@@ -1,0 +1,33 @@
+name x y information rating districtId 
+muzeu 100 250 open 10 1
+
+bar 50 50 Irish pub 7 1
+
+casa 150 50 nr.12 5 1
+
+casa 150 150 nr.44 9 1
+
+muzeu 100 250 open 10 1
+
+bar 50 50 Irish pub 7 1
+
+casa 150 50 nr.12 5 1
+
+casa 150 150 nr.44 9 1
+
+muzeu 100 250 open 10 1
+
+bar 50 50 Irish pub 7 1
+
+casa 150 50 nr.12 5 1
+
+casa 150 150 nr.44 9 1
+
+muzeu 100 250 open 10 1
+
+bar 50 50 Irish pub 7 1
+
+casa 150 50 nr.12 5 1
+
+casa 150 150 nr.44 9 1
+

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sat Aug 29 16:42:18 2020
+# Process ID: 10284
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/BRAM2_blk_mem_gen_0_0_synth_1
+# Command line: vivado.exe -log BRAM2_blk_mem_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BRAM2_blk_mem_gen_0_0.tcl
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/BRAM2_blk_mem_gen_0_0_synth_1/BRAM2_blk_mem_gen_0_0.vds
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/BRAM2_blk_mem_gen_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source BRAM2_blk_mem_gen_0_0.tcl -notrace

@@ -1,0 +1,411 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Dec 19 23:35:24 2019
+# Process ID: 5740
+# Current directory: C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.runs/synth_2
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.runs/synth_2/main.vds
+# Journal file: C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4816 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 306.188 ; gain = 94.184
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'db' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/imports/new/db.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'db' (1#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/imports/new/db.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'displ7seg' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/imports/new/displ7seg.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'displ7seg' (2#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/imports/new/displ7seg.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'ALU1' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'square_root' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/Sqrt.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'square_root' (3#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/Sqrt.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'impartire' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/impartire.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'impartire' (4#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/impartire.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'inmultire' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/inmultire.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'sume' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/sume.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'sume' (5#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/sume.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'inmultire' (6#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/inmultire.vhd:39]
+WARNING: [Synth 8-614] signal 'rezz' is read in the process but is not in the sensitivity list [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:79]
+WARNING: [Synth 8-614] signal 'rez_imp' is read in the process but is not in the sensitivity list [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:79]
+WARNING: [Synth 8-614] signal 'rez_imm' is read in the process but is not in the sensitivity list [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:79]
+WARNING: [Synth 8-614] signal 'rst_imp' is read in the process but is not in the sensitivity list [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'ALU1' (7#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'main' (8#1) [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:47]
+WARNING: [Synth 8-3331] design main has unconnected port LED[11]
+WARNING: [Synth 8-3331] design main has unconnected port LED[6]
+WARNING: [Synth 8-3331] design main has unconnected port LED[5]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 343.703 ; gain = 131.699
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[31] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[30] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[29] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[28] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[27] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[26] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[25] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[24] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[23] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[22] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[21] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[20] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[19] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[18] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[17] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[16] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[15] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[14] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[13] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[12] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[11] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[10] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[9] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+WARNING: [Synth 8-3295] tying undriven pin ssd:Data[8] to constant 0 [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/main.vhd:76]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 343.703 ; gain = 131.699
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 654.898 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 654.898 ; gain = 442.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 654.898 ; gain = 442.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 654.898 ; gain = 442.895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:81]
+WARNING: [Synth 8-327] inferring latch for variable 'eq_reg' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:109]
+WARNING: [Synth 8-327] inferring latch for variable 'gr_reg' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:93]
+WARNING: [Synth 8-327] inferring latch for variable 'ls_reg' [C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.srcs/sources_1/new/ALU1.vhd:101]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 654.898 ; gain = 442.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 8     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
+	   3 Input      1 Bit         XORs := 12    
++---Registers : 
+	               20 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 8     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	  18 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+Module db 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module displ7seg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+Module square_root 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module impartire 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      4 Bit       Adders := 8     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 8     
+Module sume 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module ALU1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	  18 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "ssd/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3331] design main has unconnected port LED[11]
+WARNING: [Synth 8-3331] design main has unconnected port LED[6]
+WARNING: [Synth 8-3331] design main has unconnected port LED[5]
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[16]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[17]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[18]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[19]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[20]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[21]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[22]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[23]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[24]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[25]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[26]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[27]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[28]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[29]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[30]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (db0/count_int_reg[31]) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 654.898 ; gain = 442.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 654.898 ; gain = 442.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:52 . Memory (MB): peak = 725.609 ; gain = 513.605
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    19|
+|3     |LUT1   |    40|
+|4     |LUT2   |    25|
+|5     |LUT3   |    27|
+|6     |LUT4   |    58|
+|7     |LUT5   |    40|
+|8     |LUT6   |    86|
+|9     |MUXF7  |     7|
+|10    |FDCE   |     2|
+|11    |FDRE   |    65|
+|12    |FDSE   |     1|
+|13    |LD     |     3|
+|14    |IBUF   |    20|
+|15    |OBUF   |    29|
+|16    |OBUFT  |     3|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+------------+------+
+|      |Instance |Module      |Cells |
++------+---------+------------+------+
+|1     |top      |            |   426|
+|2     |  alu    |ALU1        |   140|
+|3     |    sqrt |square_root |    77|
+|4     |  db0    |db          |    44|
+|5     |  db1    |db_0        |     4|
+|6     |  db2    |db_1        |     4|
+|7     |  ssd    |displ7seg   |    69|
++------+---------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 727.105 ; gain = 185.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 727.105 ; gain = 515.102
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  LD => LDCE: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 727.105 ; gain = 505.121
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Fonea/Desktop/PROIECT SSC/ALU/ALU.runs/synth_2/main.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 727.105 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 19 23:36:20 2019...

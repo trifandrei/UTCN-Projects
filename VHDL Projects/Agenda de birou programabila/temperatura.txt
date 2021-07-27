@@ -1,0 +1,71 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity 	Temp is
+	port(Temp_clk_iu:in std_logic;
+		 Temp_clk_id:in std_logic;
+		temp_o:out string(1 to 4)
+	);				   
+end Temp;
+architecture T1 of Temp is
+
+signal temperatura:integer:=0;
+signal tmp:string(1 to 4);
+begin
+	process(Temp_clk_iu,Temp_clk_id)
+	begin
+		if Temp_clk_iu='1' then
+			temperatura<=temperatura+1;
+		end if;
+		if Temp_clk_id='1' then
+			temperatura<=temperatura-1;
+		end if;
+			case temperatura is
+							when 0=>tmp<="0°C ";
+							when 1=>tmp<="1°C ";
+							when 2=>tmp<="2°C ";
+							when 3=>tmp<="3°C ";
+							when 4=>tmp<="4°C ";
+							when 5=>tmp<="5°C ";
+							when 6=>tmp<="6°C ";
+							when 7=>tmp<="7°C ";
+							when 8=>tmp<="8°C ";
+							when 9=>tmp<="9°C ";
+							when 10=>tmp<="10°C";
+							when 11=>tmp<="11°C";
+							when 12=>tmp<="12°C";
+							when 13=>tmp<="13°C";
+							when 14=>tmp<="14°C";
+							when 15=>tmp<="15°C";
+							when 16=>tmp<="16°C";
+							when 17=>tmp<="17°C";
+							when 18=>tmp<="18°C";
+							when 19=>tmp<="19°C";
+							when 20=>tmp<="20°C";
+							when 21=>tmp<="21°C";
+							when 22=>tmp<="22°C";
+							when 23=>tmp<="23°C";
+							when 24=>tmp<="24°C";
+							when 25=>tmp<="25°C";
+							when 26=>tmp<="26°C";
+							when 27=>tmp<="27°C";	
+							when 28=>tmp<="28°C";
+							when 29=>tmp<="29°C";
+							when 30=>tmp<="30°C";
+							when 31=>tmp<="31°C";
+							when 32=>tmp<="32°C";
+							when 33=>tmp<="33°C";
+							when 34=>tmp<="34°C";
+							when 35=>tmp<="35°C";
+							when 36=>tmp<="36°C";
+							when 37=>tmp<="37°C";
+							when 38=>tmp<="38°C";
+							when others =>null;
+			end case; 		
+							temp_o<=tmp;
+	end process;
+!!!!!!!!!Atentie mare daca intreba de ce ai folosit semnal de tip string zici ca ii doar pentru partea de test in vhdl fizic nu exista un asemenea semnal si nu se poate implementa !!!!!Acum pe bune un cablu prin care trec litere ar fii absurd !!!aceasta parte trebuie modificata pentru placuta 
+end T1;

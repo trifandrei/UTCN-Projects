@@ -1,0 +1,27 @@
+set(arithmetic).
+assign(domain_size,10). % 9 numbers
+
+%For level 5
+%list(distinct).
+%[0,g1,g2,g3,g4,g5,g6,5,g8,g9]. % The grids for each line 
+
+%For general level.
+list(distinct).
+[0,g1,g2,g3,g4,g5,g6,g7,g8,g9].
+
+end_of_list.
+
+formulas(assumptions).
+
+%Level 5
+
+%g1+g2+g3+g4=20.
+%g4+g5+g6+5=20.
+%5+g8+g9+g1=20.
+
+%General Level
+
+g1+g2+g3+g4=g4+g5+g6+g7.
+g7+g8+g9+g1=g4+g5+g6+g7.
+
+end_of_list.

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Aug 30 16:44:11 2020
+# Process ID: 9484
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent936 C:\Users\trian\Desktop\Practica\VGA_on_Fpga\VGA_on_Fpga.xpr
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/vivado.log
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.xpr
+import_files -norecurse {{H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd}}

@@ -1,0 +1,758 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sat Aug 29 11:29:17 2020
+# Process ID: 11720
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7224 C:\Users\trian\Desktop\Practica\VGA_on_Fpga\VGA_on_Fpga.xpr
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/vivado.log
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xillinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 809.598 ; gain = 135.574esynth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: controller
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:01:30 ; elapsed = 00:25:07 . Memory (MB): peak = 872.836 ; gain = 662.883
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'I2C' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:34' bound to instance 'A1' of component 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'I2C' (1#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-3491] module 'registers' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:34' bound to instance 'A2' of component 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'registers' (2#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (3#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+WARNING: [Synth 8-3917] design controller has port reset driven by constant 1
+WARNING: [Synth 8-3917] design controller has port pwdn driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:31 ; elapsed = 00:25:08 . Memory (MB): peak = 900.664 ; gain = 690.711
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:31 ; elapsed = 00:25:08 . Memory (MB): peak = 900.664 ; gain = 690.711
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:48 ; elapsed = 00:25:18 . Memory (MB): peak = 1217.926 ; gain = 1007.973
+13 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1217.926 ; gain = 389.281
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: controller
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:42 ; elapsed = 00:35:37 . Memory (MB): peak = 1217.926 ; gain = 1007.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'I2C' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:34' bound to instance 'A1' of component 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'I2C' (1#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-3491] module 'registers' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:34' bound to instance 'A2' of component 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'registers' (2#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (3#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+WARNING: [Synth 8-3917] design controller has port reset driven by constant 1
+WARNING: [Synth 8-3917] design controller has port pwdn driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:43 ; elapsed = 00:35:38 . Memory (MB): peak = 1217.926 ; gain = 1007.973
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:43 ; elapsed = 00:35:38 . Memory (MB): peak = 1217.926 ; gain = 1007.973
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:02:50 ; elapsed = 00:35:41 . Memory (MB): peak = 1255.383 ; gain = 1045.430
+12 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.383 ; gain = 37.457
+close_design
+close [ open C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd w ]
+add_files C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_bd_design "design_1"
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/design_1/design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.383 ; gain = 0.000
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+delete_bd_objs [get_bd_cells blk_mem_gen_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+remove_files  C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/design_1/design_1.bd
+set_property part xc7a100tcsg324-1 [current_project]
+set_property target_language VHDL [current_project]
+create_bd_design "BRAM"
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd> 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+create_bd_cell: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1274.539 ; gain = 0.000
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Assume_Synchronous_Clk {true} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {153600} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Enable_A {Always_Enabled} CONFIG.Operating_Mode_B {NO_CHANGE} CONFIG.Enable_B {Always_Enabled} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.use_bram_block {Stand_Alone} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_A_Write_Rate {50} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_bd_cells blk_mem_gen_0]
+endgroup
+create_bd_cell -type module -reference VGA VGA_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property location {1 -38 -4} [get_bd_cells VGA_0]
+set_property location {0.5 -118 23} [get_bd_cells VGA_0]
+delete_bd_objs [get_bd_cells VGA_0]
+save_bd_design
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd> 
+close_bd_design [get_bd_designs BRAM]
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+open_bd_design {C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd}
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0
+Successfully read diagram <BRAM> from BD file <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd>
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+open_bd_design {C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd}
+startgroup
+create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:bram_rtl:1.0 BRAM_PORTA
+connect_bd_intf_net [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA] [get_bd_intf_ports BRAM_PORTA]
+endgroup
+startgroup
+create_bd_port -dir I -from 17 -to 0 addra
+connect_bd_net [get_bd_pins /blk_mem_gen_0/addra] [get_bd_ports addra]
+WARNING: [BD 41-1306] The connection to interface pin /blk_mem_gen_0/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+endgroup
+set_property location {-188 60} [get_bd_ports addra]
+create_bd_cell -type module -reference controller controller_0
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'reset' as interface 'reset'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+create_bd_cell: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1274.539 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property location {0.5 -158 157} [get_bd_cells controller_0]
+set_property location {1 -186 158} [get_bd_cells controller_0]
+set_property location {1 -196 181} [get_bd_cells controller_0]
+regenerate_bd_layout -routing
+set_property location {0.5 -31 232} [get_bd_cells controller_0]
+create_bd_cell -type module -reference VGA VGA_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+create_bd_cell -type module -reference Capture Capture_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+regenerate_bd_layout -routing
+set_property location {0.5 -93 348} [get_bd_cells Capture_0]
+set_property location {2 113 53} [get_bd_cells VGA_0]
+set_property location {3 419 339} [get_bd_cells controller_0]
+set_property location {4.5 777 139} [get_bd_cells blk_mem_gen_0]
+regenerate_bd_layout -routing
+delete_bd_objs [get_bd_intf_nets BRAM_PORTA_1]
+delete_bd_objs [get_bd_intf_ports BRAM_PORTA]
+set_property location {0.5 -315 263} [get_bd_cells Capture_0]
+set_property location {0.5 -981 299} [get_bd_cells Capture_0]
+set_property location {1.5 -604 315} [get_bd_cells Capture_0]
+regenerate_bd_layout
+regenerate_bd_layout
+set_property location {194 47} [get_bd_ports addra]
+undo
+INFO: [Common 17-17] undo 'set_property location {194 47} [get_bd_ports addra]'
+set_property location {0.5 -15 67} [get_bd_cells Capture_0]
+delete_bd_objs [get_bd_nets addra_1]
+delete_bd_objs [get_bd_ports addra]
+set_property location {0.5 -208 211} [get_bd_cells Capture_0]
+connect_bd_net [get_bd_pins Capture_0/Addr] [get_bd_pins blk_mem_gen_0/addra]
+WARNING: [BD 41-1306] The connection to interface pin /blk_mem_gen_0/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Capture_0/Dout] [get_bd_pins blk_mem_gen_0/dina]
+WARNING: [BD 41-1306] The connection to interface pin /blk_mem_gen_0/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Capture_0/We] [get_bd_pins blk_mem_gen_0/wea]
+WARNING: [BD 41-1306] The connection to interface pin /blk_mem_gen_0/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+close_bd_design [get_bd_designs BRAM]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+open_bd_design {C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd}
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0
+Successfully read diagram <BRAM> from BD file <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd>
+validate_bd_design
+make_wrapper -files [get_files C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd] -top
+INFO: [BD 41-1662] The design 'BRAM.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM.vhd
+VHDL Output written to : C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM_wrapper.vhd
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd> 
+import_files -force -norecurse C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+open_bd_design {C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd}
+remove_files  C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/imports/hdl/BRAM_wrapper.vhd
+file delete -force C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/imports/hdl/BRAM_wrapper.vhd
+open_bd_design {C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd}
+close_bd_design [get_bd_designs BRAM]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0
+Successfully read diagram <BRAM> from BD file <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd>
+INFO: [BD 41-1662] The design 'BRAM.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM.vhd
+VHDL Output written to : C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+Exporting to file C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hw_handoff/BRAM.hwh
+Generated Block Design Tcl file C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hw_handoff/BRAM_bd.tcl
+Generated Hardware Definition File C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM.hwdef
+INFO: [HDL 9-1061] Parsing VHDL file "c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/ip/BRAM_blk_mem_gen_0_0/synth/BRAM_blk_mem_gen_0_0.vhd" into library xil_defaultlib [c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/ip/BRAM_blk_mem_gen_0_0/synth/BRAM_blk_mem_gen_0_0.vhd:1]
+[Sat Aug 29 15:32:33 2020] Launched BRAM_blk_mem_gen_0_0_synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/BRAM_blk_mem_gen_0_0_synth_1/runme.log
+[Sat Aug 29 15:32:33 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1355.922 ; gain = 75.996
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd" into library xil_defaultlib [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:1]
+[Sat Aug 29 15:36:38 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+close [ open C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd w ]
+add_files C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd
+close [ open C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd w ]
+add_files C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: vga_on_fpga
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:12:50 ; elapsed = 04:33:46 . Memory (MB): peak = 1363.746 ; gain = 1153.793
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_on_fpga' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:34' bound to instance 'I1' of component 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-3491] module 'Capture' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:40' bound to instance 'I2' of component 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Capture' (2#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-3491] module 'BRAM' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM.vhd:14' bound to instance 'I3' of component 'BRAM' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'BRAM' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM.vhd:21]
+INFO: [Synth 8-3491] module 'BRAM_blk_mem_gen_0_0' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/.Xil/Vivado-11720-DESKTOP-UG71SN2/realtime/BRAM_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'BRAM_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'BRAM_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/.Xil/Vivado-11720-DESKTOP-UG71SN2/realtime/BRAM_blk_mem_gen_0_0_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'BRAM' (3#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/hdl/BRAM.vhd:21]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:34' bound to instance 'I4' of component 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'I2C' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:34' bound to instance 'A1' of component 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'I2C' (4#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-3491] module 'registers' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:34' bound to instance 'A2' of component 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'registers' (5#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (6#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'clock_div' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:34' bound to instance 'I5' of component 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A1' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'bisD' (7#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A2' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:57]
+WARNING: [Synth 8-3848] Net clk2 in module/entity clock_div does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (8#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+WARNING: [Synth 8-115] binding instance 'I3' in module 'vga_on_fpga' to reference 'BRAM' which has no pins
+WARNING: [Synth 8-3848] Net debounce in module/entity vga_on_fpga does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:134]
+WARNING: [Synth 8-3848] Net doutb in module/entity vga_on_fpga does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'vga_on_fpga' (9#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+WARNING: [Synth 8-3331] design clock_div has unconnected port clk100
+WARNING: [Synth 8-3331] design vga_on_fpga has unconnected port btnl
+WARNING: [Synth 8-3331] design vga_on_fpga has unconnected port btnc
+WARNING: [Synth 8-3331] design vga_on_fpga has unconnected port btnr
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:12:51 ; elapsed = 04:33:47 . Memory (MB): peak = 1363.746 ; gain = 1153.793
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[11] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[10] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[9] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[8] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[7] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[6] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[5] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[4] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[3] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[2] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[1] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[0] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:138]
+WARNING: [Synth 8-3295] tying undriven pin I4:resend to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:150]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:12:51 ; elapsed = 04:33:47 . Memory (MB): peak = 1363.746 ; gain = 1153.793
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/ip/BRAM_blk_mem_gen_0_0/BRAM_blk_mem_gen_0_0.dcp' for cell 'I3/blk_mem_gen_0'
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:13:01 ; elapsed = 04:33:54 . Memory (MB): peak = 1502.121 ; gain = 1292.168
+35 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1502.121 ; gain = 138.375
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd" into library xil_defaultlib [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:1]
+[Sat Aug 29 16:08:44 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+close_design
+open_bd_design {C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd}
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0
+Successfully read diagram <BRAM> from BD file <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd>
+validate_bd_design -force
+save_bd_design
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd> 
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: vga_on_fpga
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:14:03 ; elapsed = 04:45:56 . Memory (MB): peak = 1502.121 ; gain = 1292.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_on_fpga' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:57]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:34' bound to instance 'I1' of component 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-3491] module 'Capture' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:40' bound to instance 'I2' of component 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Capture' (2#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-637] synthesizing blackbox instance 'I3' of component 'BRAM_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:146]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:34' bound to instance 'I4' of component 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'I2C' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:34' bound to instance 'A1' of component 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'I2C' (3#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-3491] module 'registers' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:34' bound to instance 'A2' of component 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'registers' (4#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (5#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'clock_div' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:34' bound to instance 'I5' of component 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A1' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'bisD' (6#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A2' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (7#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+WARNING: [Synth 8-3848] Net debounce in module/entity vga_on_fpga does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:132]
+WARNING: [Synth 8-3848] Net rdinb in module/entity vga_on_fpga does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:111]
+INFO: [Synth 8-256] done synthesizing module 'vga_on_fpga' (8#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:57]
+WARNING: [Synth 8-3331] design vga_on_fpga has unconnected port btnc
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:14:04 ; elapsed = 04:45:57 . Memory (MB): peak = 1502.121 ; gain = 1292.168
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin I4:resend to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:148]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:14:05 ; elapsed = 04:45:58 . Memory (MB): peak = 1502.121 ; gain = 1292.168
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:14:11 ; elapsed = 04:46:01 . Memory (MB): peak = 1537.961 ; gain = 1328.008
+29 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1537.961 ; gain = 35.840
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sat Aug 29 16:19:52 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+[Sat Aug 29 16:19:52 2020] Launched impl_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/impl_1/runme.log
+close [ open C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/debounce.vhd w ]
+add_files C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/debounce.vhd
+remove_files  C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/debounce.vhd
+file delete -force C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/debounce.vhd
+add_files -norecurse {{H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd}}
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd" into library xil_defaultlib [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:1]
+[Sat Aug 29 16:30:37 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd" into library xil_defaultlib [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:1]
+[Sat Aug 29 16:31:29 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-1061] Parsing VHDL file "H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd" into library xil_defaultlib [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:1]
+[Sat Aug 29 16:32:41 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: vga_on_fpga
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:15:44 ; elapsed = 05:03:57 . Memory (MB): peak = 1537.961 ; gain = 1328.008
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_on_fpga' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+INFO: [Synth 8-3491] module 'lab1p3' declared at 'H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:35' bound to instance 'I0' of component 'lab1p3' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'lab1p3' [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'lab1p3' (1#1) [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:34' bound to instance 'I1' of component 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-3491] module 'Capture' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:40' bound to instance 'I2' of component 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Capture' (3#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-637] synthesizing blackbox instance 'I3' of component 'BRAM_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:157]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:34' bound to instance 'I4' of component 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'I2C' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:34' bound to instance 'A1' of component 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'I2C' (4#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-3491] module 'registers' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:34' bound to instance 'A2' of component 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'registers' (5#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (6#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'clock_div' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:34' bound to instance 'I5' of component 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A1' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'bisD' (7#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A2' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (8#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+WARNING: [Synth 8-3848] Net rdinb in module/entity vga_on_fpga does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'vga_on_fpga' (9#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:15:45 ; elapsed = 05:03:58 . Memory (MB): peak = 1537.961 ; gain = 1328.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:15:45 ; elapsed = 05:03:58 . Memory (MB): peak = 1537.961 ; gain = 1328.008
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:15:52 ; elapsed = 05:04:02 . Memory (MB): peak = 1553.336 ; gain = 1343.383
+32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1553.336 ; gain = 15.375
+close_design
+create_bd_design "BRAM2"
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/BRAM2.bd> 
+create_bd_design: Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 1553.336 ; gain = 0.000
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Memory_Type {Simple_Dual_Port_RAM} CONFIG.Assume_Synchronous_Clk {true} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {153600} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Enable_A {Always_Enabled} CONFIG.Enable_B {Always_Enabled} CONFIG.use_bram_block {Stand_Alone} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Operating_Mode_B {READ_FIRST} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Use_RSTB_Pin {false} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {0} CONFIG.Port_B_Enable_Rate {100}] [get_bd_cells blk_mem_gen_0]
+endgroup
+open_bd_design {C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/BRAM2.bd}
+remove_files  C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM/BRAM.bd
+file delete -force C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM
+save_bd_design
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/BRAM2.bd> 
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/ui/bd_a7a79f16.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+VHDL Output written to : C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd
+VHDL Output written to : C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2_wrapper.vhd
+Wrote  : <C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/BRAM2.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+Exporting to file C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hw_handoff/BRAM2.hwh
+Generated Block Design Tcl file C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hw_handoff/BRAM2_bd.tcl
+Generated Hardware Definition File C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.hwdef
+INFO: [HDL 9-1061] Parsing VHDL file "c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/ip/BRAM2_blk_mem_gen_0_0/synth/BRAM2_blk_mem_gen_0_0.vhd" into library xil_defaultlib [c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/ip/BRAM2_blk_mem_gen_0_0/synth/BRAM2_blk_mem_gen_0_0.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd" into library xil_defaultlib [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/ip/BRAM2_blk_mem_gen_0_0/synth/BRAM2_blk_mem_gen_0_0.vhd" into library xil_defaultlib [c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/ip/BRAM2_blk_mem_gen_0_0/synth/BRAM2_blk_mem_gen_0_0.vhd:1]
+[Sat Aug 29 16:42:17 2020] Launched BRAM2_blk_mem_gen_0_0_synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/BRAM2_blk_mem_gen_0_0_synth_1/runme.log
+[Sat Aug 29 16:42:17 2020] Launched synth_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1553.336 ; gain = 0.000
+launch_runs impl_1 -jobs 4
+[Sat Aug 29 18:37:31 2020] Launched impl_1...
+Run output will be captured here: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1683.410 ; gain = 0.125
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1683.410 ; gain = 0.125
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/BRAM2.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: vga_on_fpga
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:18:44 ; elapsed = 07:14:05 . Memory (MB): peak = 2223.191 ; gain = 2013.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_on_fpga' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+INFO: [Synth 8-3491] module 'lab1p3' declared at 'H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:35' bound to instance 'I0' of component 'lab1p3' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'lab1p3' [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'lab1p3' (1#1) [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:34' bound to instance 'I1' of component 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-3491] module 'Capture' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:40' bound to instance 'I2' of component 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Capture' (3#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-3491] module 'BRAM2' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:14' bound to instance 'I3' of component 'BRAM2' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'BRAM2' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:21]
+INFO: [Synth 8-3491] module 'BRAM2_blk_mem_gen_0_0' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/.Xil/Vivado-11720-DESKTOP-UG71SN2/realtime/BRAM2_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'BRAM2_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'BRAM2_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/.Xil/Vivado-11720-DESKTOP-UG71SN2/realtime/BRAM2_blk_mem_gen_0_0_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'BRAM2' (4#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:21]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:34' bound to instance 'I4' of component 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'I2C' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:34' bound to instance 'A1' of component 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'I2C' (5#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-3491] module 'registers' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:34' bound to instance 'A2' of component 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'registers' (6#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (7#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'clock_div' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:34' bound to instance 'I5' of component 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A1' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'bisD' (8#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A2' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (9#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+WARNING: [Synth 8-115] binding instance 'I3' in module 'vga_on_fpga' to reference 'BRAM2' which has no pins
+WARNING: [Synth 8-3848] Net doutb in module/entity vga_on_fpga does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'vga_on_fpga' (10#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:18:45 ; elapsed = 07:14:06 . Memory (MB): peak = 2223.191 ; gain = 2013.238
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[11] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[10] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[9] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[8] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[7] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[6] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[5] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[4] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[3] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[2] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[1] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[0] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:18:45 ; elapsed = 07:14:06 . Memory (MB): peak = 2223.191 ; gain = 2013.238
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/ip/BRAM2_blk_mem_gen_0_0/BRAM2_blk_mem_gen_0_0.dcp' for cell 'I3/blk_mem_gen_0'
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:18:53 ; elapsed = 07:14:10 . Memory (MB): peak = 2333.445 ; gain = 2123.492
+38 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2333.445 ; gain = 110.254
+close_design
+close_design
+add_files -fileset constrs_1 -norecurse {{D:/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc}}
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/BRAM2.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: vga_on_fpga
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:20:03 ; elapsed = 07:32:13 . Memory (MB): peak = 2333.445 ; gain = 2123.492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_on_fpga' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+INFO: [Synth 8-3491] module 'lab1p3' declared at 'H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:35' bound to instance 'I0' of component 'lab1p3' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'lab1p3' [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'lab1p3' (1#1) [H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/sources_1/imports/new/lab1p3.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:34' bound to instance 'I1' of component 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/VGA.vhd:47]
+INFO: [Synth 8-3491] module 'Capture' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:40' bound to instance 'I2' of component 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'Capture' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Capture' (3#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/Capture.vhd:50]
+INFO: [Synth 8-3491] module 'BRAM2' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:14' bound to instance 'I3' of component 'BRAM2' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'BRAM2' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:21]
+INFO: [Synth 8-3491] module 'BRAM2_blk_mem_gen_0_0' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/.Xil/Vivado-11720-DESKTOP-UG71SN2/realtime/BRAM2_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'BRAM2_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'BRAM2_blk_mem_gen_0_0' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/.Xil/Vivado-11720-DESKTOP-UG71SN2/realtime/BRAM2_blk_mem_gen_0_0_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'BRAM2' (4#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/hdl/BRAM2.vhd:21]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:34' bound to instance 'I4' of component 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'I2C' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:34' bound to instance 'A1' of component 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'I2C' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'I2C' (5#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/I2C.vhd:45]
+INFO: [Synth 8-3491] module 'registers' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:34' bound to instance 'A2' of component 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'registers' (6#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/register.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'controller' (7#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/controller.vhd:46]
+INFO: [Synth 8-3491] module 'clock_div' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:34' bound to instance 'I5' of component 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'clock_div' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A1' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'bisD' (8#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:12]
+INFO: [Synth 8-3491] module 'bisD' declared at 'C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/bisD.vhd:4' bound to instance 'A2' of component 'bisD' [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'clock_div' (9#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/clock_div.vhd:41]
+WARNING: [Synth 8-115] binding instance 'I3' in module 'vga_on_fpga' to reference 'BRAM2' which has no pins
+WARNING: [Synth 8-3848] Net doutb in module/entity vga_on_fpga does not have driver. [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'vga_on_fpga' (10#1) [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:20:04 ; elapsed = 07:32:15 . Memory (MB): peak = 2333.445 ; gain = 2123.492
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[11] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[10] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[9] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[8] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[7] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[6] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[5] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[4] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[3] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[2] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[1] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+WARNING: [Synth 8-3295] tying undriven pin I1:frame_pixel[0] to constant 0 [C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/new/vga_on_fpga.vhd:144]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:20:04 ; elapsed = 07:32:15 . Memory (MB): peak = 2333.445 ; gain = 2123.492
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.srcs/sources_1/bd/BRAM2/ip/BRAM2_blk_mem_gen_0_0/BRAM2_blk_mem_gen_0_0.dcp' for cell 'I3/blk_mem_gen_0'
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [D:/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:20:15 ; elapsed = 07:32:21 . Memory (MB): peak = 2333.445 ; gain = 2123.492
+38 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2333.445 ; gain = 0.000
+close_design
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 29 19:13:10 2020...

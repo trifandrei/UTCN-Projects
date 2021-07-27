@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sat Apr 20 13:18:43 2019
+# Process ID: 7412
+# Current directory: C:/Users/Fonea/Desktop/AC MIPS/test_env
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2116 C:\Users\Fonea\Desktop\AC MIPS\test_env\test_env.xpr
+# Log file: C:/Users/Fonea/Desktop/AC MIPS/test_env/vivado.log
+# Journal file: C:/Users/Fonea/Desktop/AC MIPS/test_env\vivado.jou
+#-----------------------------------------------------------
+start_gui
+oopen_project {C:/Users/Fonea/Desktop/AC MIPS/test_env/test_env.xpr}SScanning sources...Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Fonea/Desktop/AC MIPS/test_env/test_env.ip_user_files'.
+IINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specifiedINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2016.4/data/ip'.
+oopen_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 793.184 ; gain = 173.387eexit
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 20 22:27:33 2019...

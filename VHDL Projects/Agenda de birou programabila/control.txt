@@ -1,0 +1,134 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity Control is
+	port( Control_clk_i:  in  std_logic;
+			Control_set_i:	 in  std_logic;
+			Control_timp_o: out bit_vector(15 downto 0);
+			Ziua:out string(1 to 9);
+			Minute1:out integer  ;
+			Minute2:out integer  ;
+			Ora1:out integer  ;
+			Ora2:out integer  ;
+			ZiuaC:out integer :=0;
+			DataC:out integer :=1;
+			AnC:out integer :=1990
+		  );
+end Control;
+
+architecture Behaviour of Control is
+
+
+signal m1: integer := 0; 
+signal m2: integer := 0; 
+
+signal h1: integer range 0 to 10 := 0; 
+signal h2: integer range 0 to 3 := 0; 
+signal TZI:String ( 1 to 9);---!!semnal string nu exista in realitate asa ceva
+signal zi:integer :=0;
+signal luna:integer :=1;
+signal an:integer :=1990;
+begin
+	process(Control_clk_i, Control_set_i)	
+	
+	variable var:integer:=0;
+	variable var2:integer:=0;
+	variable var3:integer:=0; 
+	
+	begin
+		-- Verifica daca este un puls
+		if Control_clk_i = '1' or Control_set_i = '1' then
+		    m1 <= m1 + 1;
+			Control_timp_o(3 downto 0) <= to_bitvector(std_logic_vector(to_unsigned(m1, 4)));  
+
+			Minute1<=m1;
+			if m1 = 9 then
+				m2 <= m2 + 1;
+				m1 <= 0;
+				Control_timp_o(7 downto 4) <= to_bitvector(std_logic_vector(to_unsigned(m2, 4))); 
+				Minute2<=m2;
+				if m2 = 5 and m1 = 9 then
+					h1 <= h1 + 1;
+					m1 <= 0;
+					m2 <= 0;
+					Control_timp_o(11 downto 8) <= to_bitvector(std_logic_vector(to_unsigned(h1, 4)));
+					Ora1<=h1;
+					if h1 = 9 then
+					  h2 <= h2 + 1;
+					  h1 <= 0;	 
+					  Control_timp_o(15 downto 12)<= to_bitvector(std_logic_vector(to_unsigned(h2, 4)));
+					end if; -- h1  
+					Ora2<=h2;
+					if h2 = 2 and h1 = 4 then
+						h2 <= 0; 
+						h1 <= 0;
+						zi<=zi+1;	  --zi++
+					end if;
+					if luna=2 and zi=28 and an mod 4/=0 then
+							luna<=luna+1;
+							zi<=0;
+					end if ;  
+					if luna=2 and zi=29 and an mod 4=0 then
+							luna<=luna+1;
+							zi<=0;
+						end if ;
+						if luna mod 2=1 and zi=31 then
+							luna<=luna+1;
+							zi<=0;
+						end if;
+						if luna mod 2=0 and zi=30 and luna/=2 then
+							luna<=luna+1;
+							zi<=0;
+						end if;	 
+						if luna=13 then
+							luna<=1;
+							an<=an+1;		--an++
+						end if;	
+						--w=(d+(2.6*luna-0.2)-2c+y+y/4+c/4) mod 7
+						  --2.6*luna-0.2
+						case luna is
+							when 1 =>var:=2;
+							when 2 =>var:=5;
+							when 3 =>var:=7;
+							when 4 =>var:=10;
+							when 5 =>var:=12;
+							when 6 =>var:=15;
+							when 7 =>var:=18;  
+							when 8 =>var:=20;
+							when 9 =>var:=23;
+							when 10 =>var:=25;
+							when 11 =>var:=28;
+							when 12 =>var:=30;
+							when others =>var2:=2;
+						end case;			 
+						if luna=1 or luna=2 then
+							var2:=(an mod 100)-1;
+						else
+							var2:=(an mod 100);
+						end if;
+						--w=(d+(2.6*luna-0.2)-2c+y+y/4+c/4)mod 7
+						var3:=(zi+ var-40+var2+var2/4 +5 ) mod 7;
+						
+						case var3 is
+							when 0=>TZI<="LUNI     ";
+							when 1=>TZI<="MARTI    ";
+							when 2=>TZI<="MIERCURI ";
+							when 3=>TZI<="JOI      ";
+							when 4=>TZI<="VINERI   ";
+							when 5=>TZI<="SAMBATA  ";
+							when 6=>TZI<="DUMINICA ";
+							when others =>null;
+						end case;  
+						Ziua <= TZI;
+						ZiuaC<=zi;
+						DataC<=luna;
+						AnC<=an;
+				end if; -- m2
+			end if; -- m1
+		end if; 
+	end process;
+end Behaviour;

@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Aug 30 16:47:39 2020
+# Process ID: 2672
+# Current directory: C:/Users/trian/Desktop/Practica/VGA_on_Fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6468 C:\Users\trian\Desktop\Practica\VGA_on_Fpga\VGA_on_Fpga.xpr
+# Log file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga/vivado.log
+# Journal file: C:/Users/trian/Desktop/Practica/VGA_on_Fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/trian/Desktop/Practica/VGA_on_Fpga/VGA_on_Fpga.xpr
+remove_files  -fileset constrs_1 {{D:/ALU/ALU.srcs/constrs_1/imports/a is/Nexys4DDR_Master.xdc}}
+add_files -fileset constrs_1 -norecurse {{H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/constrs_1/imports/lab2/Basys3_test_env.xdc}}
+import_files -fileset constrs_1 {{H:/CTI Sem2.2/AC/Mips/lab2/lab2.srcs/constrs_1/imports/lab2/Basys3_test_env.xdc}}
